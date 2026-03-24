@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MR Informática | Assistência Técnica em Informática e Impressoras</title>
+  <meta name="description" content="Manutenção de computadores, notebooks e impressoras. Formatação, upgrade, redes, instalação de drivers e toners compatíveis." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --brand: #0ea5e9;
+      --brand-dark: #0284c7;
+      --light: #f8fafc;
+      --accent: #22c55e;
+      --border: #e2e8f0;
+      --shadow: 0 10px 30px rgba(2, 8, 23, 0.12);
+      --radius: 18px;
+      --max: 1140px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #eef2f7;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(10px);
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+
+    .logo span { color: var(--brand); }
+
+    .menu {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(3,105,161,0.92));
+      color: white;
+      padding: 72px 0 54px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      margin: 0 0 16px;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: #dbeafe;
+      max-width: 650px;
+    }
+
+    .hero-actions {
+      margin-top: 24px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 { margin-top: 0; }
+    .hero-card ul { padding-left: 18px; margin-bottom: 0; }
+
+    section { padding: 62px 0; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      margin: 0 0 10px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 { margin-top: 0; margin-bottom: 10px; }
+    .card p { color: var(--muted); margin-bottom: 0; }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: white;
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: center;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.02rem;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #082f49, #0f766e);
+      color: white;
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta p { color: #d1fae5; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .contact-box {
+      background: white;
+      border-radius: var(--radius);
+      padding: 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box p { margin: 8px 0; color: var(--muted); }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    .mini {
+      font-size: 0.92rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid-3,
+      .features,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">MR <span>Informática</span></div>
+      <nav class="menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn-primary" href="https://wa.me/5517991499118" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">Assistência técnica em informática e impressoras</div>
+        <h1>Seu computador, notebook ou impressora com solução rápida e profissional</h1>
+        <p>
+          Atendimento para clientes residenciais e empresas, com suporte em manutenção,
+          formatação, upgrades, instalação de drivers, configuração de rede e toners compatíveis.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5517991499118?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+          <a class="btn btn-outline" href="#servicos">Ver serviços</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Atendimentos que você pode destacar</h3>
+        <ul>
+          <li>Formatação e instalação de Windows</li>
+          <li>Upgrade de SSD e memória RAM</li>
+          <li>Conserto de notebooks e PCs</li>
+          <li>Instalação e configuração de impressoras</li>
+          <li>Compartilhamento em rede</li>
+          <li>Venda de toners compatíveis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="container">
+      <div class="section-title">
+        <h2>Serviços</h2>
+        <p>Um site direto, vendedor e fácil para seu cliente entender rapidamente o que você faz.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Computadores e notebooks</h3>
+          <p>Formatação, troca de HD por SSD, limpeza, instalação de programas, backup e otimização do sistema.</p>
+        </div>
+        <div class="card">
+          <h3>Impressoras</h3>
+          <p>Instalação, configuração em rede, correção de falhas, limpeza, manutenção e suporte técnico.</p>
+        </div>
+        <div class="card">
+          <h3>Redes e atendimento técnico</h3>
+          <p>Compartilhamento, acesso remoto, configuração de roteadores, scanners, câmeras e suporte para empresas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="diferenciais">
+    <div class="container">
+      <div class="section-title">
+        <h2>Por que escolher a MR Informática?</h2>
+        <p>Esses pontos ajudam a converter visita em contato no WhatsApp.</p>
+      </div>
+      <div class="features">
+        <div class="feature"><strong>Atendimento rápido</strong><span>Agilidade para resolver seu problema</span></div>
+        <div class="feature"><strong>Preço justo</strong><span>Orçamento claro e sem enrolação</span></div>
+        <div class="feature"><strong>Experiência técnica</strong><span>Suporte para diversas marcas e modelos</span></div>
+        <div class="feature"><strong>Suporte local</strong><span>Atendimento para clientes e empresas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Precisa de ajuda com computador, notebook ou impressora?</h2>
+        <p>Fale agora no WhatsApp e solicite um orçamento rápido para manutenção, upgrade ou suporte técnico.</p>
+        <a class="btn btn-primary" href="https://wa.me/5517991499118?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20atendimento" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contato</h2>
+        <p>Troque os dados abaixo pelos dados exatos da sua empresa antes de publicar.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Fale com a MR Informática</h3>
+          <p><strong>WhatsApp:</strong> (17) 99149-9118</p>
+          <p><strong>Instagram:</strong> @mrinformatica</p>
+          <p><strong>Atendimento:</strong> Segunda a sábado</p>
+          <p><strong>Cidade:</strong> São José do Rio Preto - SP</p>
+        </div>
+        <div class="contact-box">
+          <h3>Texto comercial para o cliente</h3>
+          <p>Manutenção de computadores, notebooks e impressoras com atendimento rápido, confiança e suporte técnico especializado.</p>
+          <p>Entre em contato para orçamento de formatação, upgrades, redes, instalação de impressoras e toners compatíveis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div><strong>MR Informática</strong></div>
+      <div class="mini">Site modelo criado para apresentação da assistência técnica.</div>
+    </div>
+  </footer>
+</body>
+</html>
