@@ -152,6 +152,30 @@
       flex-wrap: wrap;
     }
 
+    .hero-info-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .hero-info-badges span {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      margin-top: 24px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
     .hero-logo {
       max-width: 100%;
       width: 440px;
@@ -254,6 +278,45 @@
 
     .contact-box p { margin: 8px 0; color: var(--muted); }
 
+    .trust-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .trust-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 100;
+      background: #dc2626;
+      color: white;
+      border-radius: 999px;
+      padding: 14px 18px;
+      font-weight: 800;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-2px);
+    }
+
     footer {
       background: #0f172a;
       color: #cbd5e1;
@@ -270,6 +333,8 @@
       .site-logo { height: 42px; }
       .logo-text { font-size: 1rem; }
       .hero-logo { width: 100%; max-width: 320px; }
+      .trust-list { grid-template-columns: 1fr; }
+      .floating-whatsapp { right: 12px; bottom: 12px; padding: 12px 16px; }
       .hero-grid,
       .grid-3,
       .features,
@@ -304,6 +369,14 @@
           formatação, upgrades, instalação de drivers, configuração de rede e toners compatíveis.
         </p>
         <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/5517991499118?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+          <a class="btn btn-outline" href="#servicos">Ver serviços</a>
+        </div>
+        <div class="hero-info-badges">
+          <span>Desde 2005</span>
+          <span>Ponto de coleta Mercado Livre</span>
+          <span>Ponto de coleta SHEIN</span>
+        </div>
           <a class="btn btn-primary" href="https://wa.me/5517991499118?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
           <a class="btn btn-outline" href="#servicos">Ver serviços</a>
         </div>
@@ -346,6 +419,28 @@
     </div>
   </section>
 
+  <section id="coleta">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ponto de coleta em Urupês</h2>
+        <p>Sua loja também ganha mais credibilidade e movimento com esse destaque no site.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <h3>Mercado Livre e SHEIN</h3>
+          <p><strong>Recebimento de encomendas:</strong> a MR Informática funciona como ponto de coleta para retirada de pedidos.</p>
+          <p><strong>Mais praticidade:</strong> o cliente retira a encomenda com segurança e atendimento local.</p>
+          <p><strong>Mais movimento para a loja:</strong> esse serviço ajuda novas pessoas a conhecerem seu comércio.</p>
+        </div>
+        <div class="contact-box">
+          <h3>Experiência desde 2005</h3>
+          <p>Mais de 20 anos atendendo Urupês e região com serviços de informática, manutenção e suporte técnico.</p>
+          <p>Isso transmite confiança para clientes residenciais e empresas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="diferenciais">
     <div class="container">
       <div class="section-title">
@@ -353,10 +448,12 @@
         <p>Esses pontos ajudam a converter visita em contato no WhatsApp.</p>
       </div>
       <div class="features">
+        <div class="feature"><strong>Desde 2005</strong><span>Mais de 20 anos de experiência em informática</span></div>
         <div class="feature"><strong>Atendimento rápido</strong><span>Agilidade para resolver seu problema</span></div>
         <div class="feature"><strong>Preço justo</strong><span>Orçamento claro e sem enrolação</span></div>
         <div class="feature"><strong>Experiência técnica</strong><span>Suporte para diversas marcas e modelos</span></div>
         <div class="feature"><strong>Suporte local</strong><span>Atendimento para clientes e empresas</span></div>
+        <div class="feature"><strong>Ponto de coleta</strong><span>Recebimento Mercado Livre e SHEIN</span></div>
       </div>
     </div>
   </section>
@@ -367,6 +464,29 @@
         <h2>Precisa de ajuda com computador, notebook ou impressora?</h2>
         <p>Fale agora no WhatsApp e solicite um orçamento rápido para manutenção, upgrade ou suporte técnico.</p>
         <a class="btn btn-primary" href="https://wa.me/5517991499118?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20atendimento" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Por que confiar na MR Informática?</h2>
+        <p>Esses pontos ajudam a transformar a visita no site em contato e orçamento.</p>
+      </div>
+      <div class="trust-list">
+        <div class="trust-item">
+          <strong>Desde 2005</strong>
+          <span>Mais de 20 anos atendendo clientes com confiança.</span>
+        </div>
+        <div class="trust-item">
+          <strong>Atendimento local</strong>
+          <span>Loja física em Urupês com suporte próximo do cliente.</span>
+        </div>
+        <div class="trust-item">
+          <strong>Serviços e coleta</strong>
+          <span>Informática, impressoras e ponto de coleta no mesmo lugar.</span>
+        </div>
       </div>
     </div>
   </section>
@@ -382,8 +502,15 @@
           <h3>Fale com a MR Informática</h3>
           <p><strong>WhatsApp:</strong> (17) 99149-9118</p>
           <p><strong>Instagram:</strong> @mrinformatica</p>
-          <p><strong>Atendimento:</strong> Segunda a sábado</p>
+          <p><strong>Destaques:</strong> Assistência técnica, toners compatíveis e ponto de coleta</p>
+          <p><strong>Atendimento:</strong> Segunda a Sexta</p>
           <p><strong>Cidade:</strong> Urupês - SP</p>
+          <p><strong>Tempo de mercado:</strong> Desde 2005</p>
+        </div>
+        <div class="contact-box">
+          <h3>Sobre a MR Informática</h3>
+          <p>Empresa fundada em 2005, oferecendo serviços de informática com confiança e experiência.</p>
+          <p>Também somos ponto autorizado de coleta de encomendas do Mercado Livre e SHEIN em Urupês.</p>
         </div>
         <div class="contact-box">
           <h3>Texto comercial para o cliente</h3>
@@ -393,6 +520,8 @@
       </div>
     </div>
   </section>
+
+    <a class="floating-whatsapp" href="https://wa.me/5517991499118?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20MR%20Inform%C3%A1tica" target="_blank" rel="noopener noreferrer">WhatsApp</a>
 
   <footer>
     <div class="container">
