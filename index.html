@@ -12,10 +12,10 @@
       --card: #ffffff;
       --text: #0f172a;
       --muted: #475569;
-      --brand: #0ea5e9;
-      --brand-dark: #0284c7;
+      --brand: #dc2626;
+      --brand-dark: #991b1b;
       --light: #f8fafc;
-      --accent: #22c55e;
+      --accent: #dc2626;
       --border: #e2e8f0;
       --shadow: 0 10px 30px rgba(2, 8, 23, 0.12);
       --radius: 18px;
@@ -58,13 +58,28 @@
       flex-wrap: wrap;
     }
 
-    .logo {
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .site-logo {
+      height: 52px;
+      width: auto;
+      border-radius: 10px;
+      object-fit: contain;
+      background: transparent;
+    }
+
+    .logo-text {
       font-size: 1.2rem;
       font-weight: 800;
       letter-spacing: 0.4px;
+      color: #ffffff;
     }
 
-    .logo span { color: var(--brand); }
+    .logo-text span { color: var(--brand); }
 
     .menu {
       display: flex;
@@ -96,7 +111,7 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(3,105,161,0.92));
+      background: linear-gradient(135deg, rgba(0,0,0,0.96), rgba(127, 29, 29, 0.94));
       color: white;
       padding: 72px 0 54px;
     }
@@ -135,6 +150,15 @@
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
+    }
+
+    .hero-logo {
+      max-width: 100%;
+      width: 440px;
+      border-radius: 18px;
+      display: block;
+      margin: 0 auto 18px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.28);
     }
 
     .hero-card {
@@ -205,7 +229,7 @@
     }
 
     .cta {
-      background: linear-gradient(135deg, #082f49, #0f766e);
+      background: linear-gradient(135deg, #111111, #991b1b);
       color: white;
       border-radius: 28px;
       padding: 36px;
@@ -243,6 +267,9 @@
     }
 
     @media (max-width: 980px) {
+      .site-logo { height: 42px; }
+      .logo-text { font-size: 1rem; }
+      .hero-logo { width: 100%; max-width: 320px; }
       .hero-grid,
       .grid-3,
       .features,
@@ -257,7 +284,7 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="logo">MR <span>Informática</span></div>
+      <div class="logo-wrap"><img class="site-logo" src="data:image/webp;base64,UklGRswCAABXRUJQVlA4IMACAABQHACdASq8Ad0APzmGulOvKKWisAgB4CcJbACdLoD+6h4wAP7/P4x+Qfov+P50fTP1n9l6v6T+0/oP6j+r/qP7L+Q/oX9H/Rf0H9J/af0X9V/Uf2n9d/Rf1n9B/Vf1H9t/Vf1n9B/Wf1X9F/Vf2H9h/Rf1X9d/Vf0n9V/Rf1X9h/Uf1X9F/Uf1H9V/Xf0H9V/Qf1n9R/Wf1n9R/Tf1X9B/Qf1X9R/af0n9V/Uf1n9B/Uf1X9R/Rf2n9N/af0n9B/Vf1X9F/Wf0n9R/Xf0H9h/Rf0H9F/Wf2n9F/Uf0H9B/Wf2H9B/Uf2H9F/Uf1n9B/Rf2n9V/Wf1n9h/Tf2n9N/Xf0n9J/Qf0X9N/af0n9B/Uf2n9R/Uf1H9F/Uf1H9J/Rf1X9V/Uf2n9J/Rf1n9J/Uf1X9Z/Wf1X9J/Rf1n9V/Uf0n9F/Rf1n9V/Uf1H9F/Rf1H9B/Uf1n9R/Xf1X9J/Uf2n9N/Qf0X9R/Xf1H9F/Uf2n9h/Vf1n9h/Rf2n9F/Tf2n9R/Uf1H9J/Tf2n9N/Uf2n9V/Uf1n9V/Uf0H9J/Uf1X9R/Uf2n9R/Xf0H9V/Uf1X9B/Uf1X9N/Rf1H9V/Qf2H9B/Uf1X9N/Vf0H9N/Uf1n9B/Xf0X9N/Uf0H9N/Vf1X9J/Tf2n9V/Uf2H9N/Uf0H9F/Uf0H9N/Uf0H9J/Qf2n9V/Uf1X9N/Uf1X9h/Uf1X9F/Xf1n9B/Wf1n9F/Uf2n9V/Xf0H9J/Qf2n9N/Uf1n9B/Uf1X9N/Uf0X9N/Uf0X9N/Uf2H9B/Vf0X9B/Rf0X9h/Vf0n9R/Uf2n9R/Tf2H9V/Uf2n9V/Uf1H9J/Rf0H9V/Uf1X9N/Uf1H9N/Uf2n9J/Qf0H9N/Uf0H9V/Uf0n9V/Vf0H9R/Uf2n9N/Qf2H9F/Uf0X9F/Tf1X9F/Uf2n9V/Tf0X9J/Qf1X9J/Vf2n9F/Qf0X9N/Uf0X9R/Uf1X9V/Vf0H9N/Uf2n9J/Vf1n9B/Uf1X9N/Uf1X9R/Tf2n9J/Uf0H9V/Tf2n9J/Rf1X9N/Uf0X9N/Uf0H9N/Uf0n9F/Uf1X9N/Uf0X9B/Xf0H9B/Uf2H9N/Vf1H9V/Uf2n9J/Rf0n9R/Vf1X9B/Rf1H9V/Uf1X9J/Qf0X9V/Uf2n9R/Uf0H9V/Wf1X9J/Qf1n9B/Uf1X9J/Tf0n9N/Uf2n9J/Qf2n9N/Uf0n9B/Xf2H9V/Uf0n9J/Vf2n9V/Uf0X9J/Uf0H9N/Uf0X9J/Uf2n9V/Uf2n9N/Uf0n9B/Qf2H9R/Rf0H9J/Uf1H9h/Tf2H9N/Vf0H9J/Uf1X9J/Uf0n9N/Uf0X9R/Uf2n9N/Uf1n9N/Rf2n9N/Uf0H9J/Qf1H9V/Xf2n9N/Uf0X9F/Tf0H9V/Tf0X9J/Tf2n9J/Uf0X9R/Uf1X9N/Uf0H9J/Uf0H9B/Uf0n9R/Tf0H9F/Rf0n9N/Vf1X9N/Uf1n9V/Uf0n9N/Uf0X9R/Uf1n9F/Qf2n9V/Tf1X9B/Qf1X9J/Rf2n9B/Uf1H9J/Uf1X9V/Uf0X9J/Uf0X9N/Uf1X9R/Uf0H9N/Uf1X9F/Uf0n9B/Uf1X9N/Uf0n9F/Rf0n9F/Uf0X9B/Uf0X9V/Uf0X9V/Uf0n9V/Qf0H9N/Uf1X9F/Uf1X9R/Tf0H9F/Uf0n9R/Uf0X9V/Uf0H9V/Qf0H9J/Uf0H9B/Tf0n9R/Uf1X9B/Qf2n9V/Uf2H9V/Uf0n9B/Uf0X9N/Tf0H9R/Uf0n9B/Uf0H9B/Vf0n9R/Uf1X9B/Qf1n9R/Uf1X9R/Uf0X9J/Uf0X9V/Uf1H9F/Uf1X9J/Uf1n9N/Uf0X9V/Uf1n9N/Uf2n9F/Tf0X9N/Uf0X9V/Uf2n9N/Uf0X9F/Qf0X9B/Uf0n9V/Uf0H9V/Uf0X9B/Uf0H9N/Uf0X9R/Uf1X9J/Uf1X9N/Uf0n9B/Qf0X9V/Uf0H9N/Uf0n9N/Uf0X9B/Qf0X9V/Uf0X9N/Uf0n9V/Uf0H9B/Uf0X9J/Uf0X9B/Qf2H9B/Uf0X9J/Uf0H9B/Tf0n9N/Uf0n9R/Uf0X9N/Uf0X9R/Uf1X9J/Uf1n9B/Qf1n9V/Uf0n9N/Uf0H9N/Uf0X9N/Uf2H9F/Qf0X9N/Uf0X9N/Uf0H9R/Uf1X9V/Uf0n9J/Uf0n9J/Uf0H9J/Uf0H9B/Uf0n9N/Uf0X9J/Uf0n9J/Uf0X9J/Uf0X9J/Uf0X9N/Uf0n9J/Uf0H9N/Tf0X9V/Uf0H9N/Uf0H9R/Uf0H9J/Uf0X9N/Uf0H9B/Uf0X9B/Uf0H9R/Qf2H9N/Uf1X9R/Uf0X9J/Uf1X9N/Uf0H9B/Qf2H9F/Uf0X9B/Tf0X9N/Uf0H9R/Qf0n9B/Uf0H9F/Uf0X9B/Uf0X9N/Uf0n9B/Uf0H9B/Uf0X9J/Tf1X9B/Uf0X9J/Uf1X9N/Uf0n9J/Uf0n9N/Uf0n9J/Uf0n9F/Qf0H9B/Uf0X9J/Uf0H9N/Uf0H9J/Uf0n9F/Uf0X9R/Qf0n9N/Uf0H9V/Uf0n9J/Uf0X9J/Uf0H9V/Qf0n9B/Uf0n9N/Uf0n9J/Uf0X9B/Uf0n9B/Uf0H9N/Uf0H9N/Uf0X9J/Uf0X9J/Uf0H9J/Uf0X9N/Uf0X9F/Uf0X9B/Uf0X9J/Uf0n9B/Uf0H9J/Uf0X9R/Qf0X9R/Tf0H9R/Uf0n9R/Qf0X9J/Uf0H9B/Uf0H9N/Uf0H9R/Uf1X9N/Uf0H9F/Uf0n9J/Uf0H9N/Uf0H9N/Uf0X9N/Uf0X9R/Uf0X9R/Uf0n9R/Uf1X9F/Uf1X9B/Uf1H9F/Uf0X9B/Uf0X9J/Uf0n9N/Uf0n9J/Uf0H9F/Uf0X9J/Uf0n9J/Uf0H9R/Uf0n9B/Uf0n9F/Qf0H9N/Uf0H9J/Qf0X9R/Uf0X9F/Uf0n9N/Uf0H9R/Uf0X9R/Uf0n9J/Uf0X9F/Uf0n9J/Uf1X9B/Uf0X9R/Uf0H9B/Uf0X9N/Uf0n9F/Uf0n9J/Uf0X9N/Uf0H9B/Uf0n9B/Uf0H9N/Uf0H9N/Uf0n9J/Uf0n9R/Uf1H9N/Uf0n9B/Uf1X9N/Uf1X9N/Uf0X9R/Uf0X9F/Uf0H9R/Qf0n9R/Uf0n9N/Uf0X9R/Uf1X9J/Uf0X9N/Uf0H9N/Uf1X9R/Uf0X9F/Uf0X9B/Uf0X9R/Uf0X9F/Uf0H9N/Uf0n9J/Uf0n9J/Uf0H9N/Uf0X9V/Uf0H9B/Uf0n9V/Uf0H9F/Uf0X9J/Uf0n9B/Uf1X9N/Uf0n9R/Uf0H9B/Uf0X9B/Uf0H9N/Uf0H9F/Uf0n9V/Qf0H9B/Uf0n9B/Uf0H9V/Qf0n9J/Uf0H9B/Uf0X9F/Uf0X9B/Uf0X9J/Uf0X9J/Uf0H9R/Qf0H9B/Uf0n9J/Uf0H9J/Uf0X9V/Uf0X9F/Uf0X9V/Qf0H9B/Uf0H9F/Tf0n9F/Uf0H9J/Uf0H9B/Uf0n9B/Qf0X9N/Uf0X9V/Uf0n9F/Uf0H9B/Uf0X9B/Uf1n9B/Uf0H9J/Uf0H9V/Uf1X9N/Uf0X9J/Uf0X9V/Uf0X9J/Uf0X9N/Uf0n9N/Uf0H9N/Uf0n9B/Uf0H9N/Uf0n9B/Uf0H9J/Uf0n9B/Uf0n9B/Uf0H9J/Uf0H9B/Uf0H9QAA/v89VyuR4M0AP7/P7UAAD+/z+1wA" alt="Logo MR Informática"><div class="logo-text">MR <span>Informática</span></div></div>
       <nav class="menu">
         <a href="#servicos">Serviços</a>
         <a href="#diferenciais">Diferenciais</a>
@@ -282,6 +309,7 @@
         </div>
       </div>
       <div class="hero-card">
+        <img class="hero-logo" src="data:image/webp;base64,UklGRswCAABXRUJQVlA4IMACAABQHACdASq8Ad0APzmGulOvKKWisAgB4CcJbACdLoD+6h4wAP7/P4x+Qfov+P50fTP1n9l6v6T+0/oP6j+r/qP7L+Q/oX9H/Rf0H9J/af0X9V/Uf2n9d/Rf1n9B/Vf1H9t/Vf1n9B/Wf1X9F/Vf2H9h/Rf1X9d/Vf0n9V/Rf1X9h/Uf1X9F/Uf1H9V/Xf0H9V/Qf1n9R/Wf1n9R/Tf1X9B/Qf1X9R/af0n9V/Uf1n9B/Uf1X9R/Rf2n9N/af0n9B/Vf1X9F/Wf0n9R/Xf0H9h/Rf0H9F/Wf2n9F/Uf0H9B/Wf2H9B/Uf2H9F/Uf1n9B/Rf2n9V/Wf1n9h/Tf2n9N/Xf0n9J/Qf0X9N/af0n9B/Uf2n9R/Uf1H9F/Uf1H9J/Tf2n9N/Vf0X9V/Uf2n9J/Qf0X9V/Uf0n9J/Uf0H9N/Uf0X9J/Uf2n9V/Uf2n9N/Uf0n9B/Qf2H9R/Rf0H9J/Uf1H9h/Tf2H9N/Vf0H9J/Uf1X9J/Uf0n9N/Uf0X9R/Uf2n9N/Uf1n9N/Rf2n9N/Uf0H9J/Qf1H9V/Xf2n9N/Uf0X9F/Tf0H9V/Tf0X9J/Tf2n9J/Uf0X9R/Uf1X9N/Uf0H9J/Uf0H9B/Uf0n9R/Tf0H9F/Rf0n9N/Vf1X9N/Uf1n9V/Uf0n9N/Uf0X9R/Uf1n9F/Qf2n9V/Tf1X9B/Qf1X9J/Rf2n9B/Uf1H9J/Uf1X9V/Uf0X9J/Uf0X9N/Uf1X9R/Uf0H9N/Uf1X9F/Uf0n9B/Uf1X9N/Uf0n9F/Rf0n9F/Uf0X9B/Uf0X9V/Uf0X9V/Uf0n9V/Qf0H9N/Uf1X9F/Uf1X9R/Tf0H9F/Uf0n9R/Uf0X9V/Uf0H9V/Qf0H9J/Uf0H9B/Tf0n9R/Uf1X9B/Qf2n9V/Uf2H9V/Uf0n9B/Uf0X9N/Tf0H9R/Uf0n9B/Uf0H9B/Vf0n9R/Uf1X9B/Qf1n9R/Uf1X9R/Uf0X9J/Uf0X9V/Uf1H9F/Uf1X9J/Uf1n9N/Uf0X9V/Uf1n9N/Uf2n9F/Tf0X9N/Uf0X9V/Uf2n9N/Uf0X9F/Qf0X9B/Uf0n9V/Uf0H9V/Uf0X9B/Uf0H9N/Uf0X9R/Uf1X9J/Uf1X9N/Uf0n9B/Qf0X9V/Uf0H9N/Uf0n9N/Uf0X9B/Qf0X9V/Uf0X9N/Uf0n9V/Uf0H9B/Uf0X9J/Uf0X9B/Qf2H9B/Uf0X9J/Uf0H9B/Tf0n9N/Uf0n9R/Uf0X9N/Uf0X9R/Uf1X9J/Uf1n9B/Qf1n9V/Uf0n9N/Uf0H9N/Uf0X9N/Uf2H9F/Qf0X9N/Uf0X9N/Uf0H9R/Uf1X9V/Uf0n9J/Uf0n9J/Uf0H9J/Uf0H9B/Uf0n9N/Uf0X9J/Uf0n9J/Uf0X9J/Uf0X9J/Uf0X9N/Uf0n9J/Uf0H9N/Tf0X9V/Uf0H9N/Uf0H9R/Uf0H9J/Uf0X9N/Uf0H9B/Uf0X9B/Uf0H9R/Qf2H9N/Uf1X9R/Uf0X9J/Uf1X9N/Uf0H9B/Qf2H9F/Uf0X9B/Tf0X9N/Uf0H9R/Qf0n9B/Uf0H9F/Uf0X9B/Uf0X9N/Uf0n9B/Uf0H9B/Uf0X9J/Tf1X9B/Uf0X9J/Uf1X9N/Uf0n9J/Uf0n9N/Uf0n9J/Uf0n9F/Qf0H9B/Uf0X9J/Uf0H9N/Uf0H9J/Uf0n9F/Uf0X9R/Qf0n9N/Uf0H9V/Uf0n9J/Uf0X9J/Uf0H9V/Qf0n9B/Uf0n9N/Uf0n9J/Uf0X9B/Uf0n9B/Uf0H9N/Uf0H9N/Uf0X9J/Uf0X9J/Uf0H9J/Uf0X9N/Uf0X9F/Uf0X9B/Uf0X9J/Uf0n9B/Uf0H9J/Uf0X9R/Qf0X9R/Tf0H9R/Uf0n9R/Qf0X9J/Uf0H9B/Uf0H9N/Uf0H9R/Uf1X9N/Uf0H9F/Uf0n9J/Uf0H9N/Uf0H9N/Uf0X9N/Uf0X9R/Uf0X9R/Uf0n9R/Uf1X9F/Uf1X9B/Uf1H9F/Uf0X9B/Uf0X9J/Uf0n9N/Uf0n9J/Uf0H9F/Uf0X9J/Uf0n9J/Uf0H9R/Uf0n9B/Uf0n9F/Qf0H9N/Uf0H9J/Qf0X9R/Uf0X9F/Uf0n9N/Uf0H9R/Uf0X9R/Uf0n9J/Uf0X9F/Uf0n9J/Uf1X9B/Uf0X9R/Uf0H9B/Uf0X9N/Uf0n9F/Uf0n9J/Uf0X9N/Uf0H9B/Uf0n9B/Uf0H9N/Uf0H9N/Uf0n9J/Uf0n9R/Uf1H9N/Uf0n9B/Uf1X9N/Uf1X9N/Uf0X9R/Uf0X9F/Uf0H9R/Qf0n9R/Uf0n9N/Uf0X9R/Uf1X9J/Uf0X9N/Uf0H9N/Uf1X9R/Uf0X9F/Uf0X9B/Uf0X9R/Uf0X9F/Uf0H9N/Uf0n9J/Uf0n9J/Uf0H9N/Uf0X9V/Uf0H9B/Uf0n9V/Uf0H9F/Uf0X9J/Uf0n9B/Uf1X9N/Uf0n9R/Uf0H9B/Uf0X9B/Uf0H9N/Uf0H9F/Uf0n9V/Qf0H9B/Uf0n9B/Uf0H9V/Qf0n9J/Uf0H9B/Uf0X9F/Uf0X9B/Uf0X9J/Uf0X9J/Uf0H9R/Qf0H9B/Uf0n9J/Uf0H9J/Uf0X9V/Uf0X9F/Uf0X9V/Qf0H9B/Uf0H9F/Tf0n9F/Uf0H9J/Uf0H9B/Uf0n9B/Qf0X9N/Uf0X9V/Uf0n9F/Uf0H9B/Uf0X9B/Uf1n9B/Uf0H9J/Uf0H9V/Uf1X9N/Uf0X9J/Uf0X9V/Uf0X9J/Uf0X9N/Uf0n9N/Uf0H9N/Uf0n9B/Uf0H9N/Uf0n9B/Uf0H9J/Uf0n9B/Uf0n9B/Uf0H9J/Uf0H9B/Uf0H9QAA/v89VyuR4M0AP7/P7UAAD+/z+1wA" alt="Logo MR Informática">
         <h3>Atendimentos que você pode destacar</h3>
         <ul>
           <li>Formatação e instalação de Windows</li>
@@ -355,7 +383,7 @@
           <p><strong>WhatsApp:</strong> (17) 99149-9118</p>
           <p><strong>Instagram:</strong> @mrinformatica</p>
           <p><strong>Atendimento:</strong> Segunda a sábado</p>
-          <p><strong>Cidade:</strong> São José do Rio Preto - SP</p>
+          <p><strong>Cidade:</strong> Urupês - SP</p>
         </div>
         <div class="contact-box">
           <h3>Texto comercial para o cliente</h3>
